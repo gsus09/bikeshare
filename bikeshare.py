@@ -74,6 +74,7 @@ def load_data(city: str, month: str, day: str) -> pd.DataFrame:
         print("NA values per column:")
         print(na_counts[na_counts > 0].to_string())
         print(f"for a total of rows {df.shape[0]}")
+        print('-'*40)
 
     df['Start Time'] = pd.to_datetime(df['Start Time'])
 
