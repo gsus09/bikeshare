@@ -73,6 +73,7 @@ def load_data(city: str, month: str, day: str) -> pd.DataFrame:
         print("NA values per column:")
         print(na_counts[na_counts > 0].to_string())
         print(f"for a total of rows {df.shape[0]}")
+        print('-'*40)
 
     df['Start Time'] = pd.to_datetime(df['Start Time'])
 
@@ -175,6 +176,7 @@ def user_stats(df: pd.DataFrame) -> None:
     if 'Birth Year' in df.columns:
         print(f"earliest year of birth: {int(df['Birth Year'].min())}")
         print(f"most recent year of birth: {int(df['Birth Year'].max())}")
+        print(f"average year of birth: {df['Birth Year'].mean():.2f}")
         print(
             f"most common year of birth: {int(df['Birth Year'].mode()[0])} "
             f"with count {df['Birth Year'].value_counts().iloc[0]}"
