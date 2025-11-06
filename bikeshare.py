@@ -57,8 +57,7 @@ def get_filters() -> Tuple[str, str, str]:
 
 
 def load_data(city: str, month: str, day: str) -> pd.DataFrame:
-    """
-    Loads data for the specified city and filters by month and day if applicable.
+    """Loads data for the specified city and filters by month and day if applicable.
 
     Args:
         (str) city - name of the city to analyze
