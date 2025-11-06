@@ -177,6 +177,7 @@ def user_stats(df: pd.DataFrame) -> None:
     if 'Birth Year' in df.columns:
         print(f"earliest year of birth: {int(df['Birth Year'].min())}")
         print(f"most recent year of birth: {int(df['Birth Year'].max())}")
+        print(f"average year of birth: {df['Birth Year'].mean():.2f}")
         print(
             f"most common year of birth: {int(df['Birth Year'].mode()[0])} "
             f"with count {df['Birth Year'].value_counts().iloc[0]}"
